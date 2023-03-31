@@ -51,6 +51,7 @@
     background-color:;
     display: flex;
     overflow-x: auto;
+    padding-right: 19px;
     
 }
 .caixa{
