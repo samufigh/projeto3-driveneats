@@ -29,21 +29,21 @@
                 <div class="container pratos">
                     <div class="caixa" onclick= "selecionarPrato(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 1</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>10.90</span></h2>
                     </div>
                     <div class="caixa" onclick= "selecionarPrato(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 2</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>11.90</span></h2>
                     </div>
                     <div class="caixa" onclick= "selecionarPrato(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 3</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>12.90</span></h2>
                     </div>
                        
                 </div>
@@ -55,21 +55,21 @@
                 <div class="container bebidas">
                     <div class="caixa" onclick= "selecionarBebida(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 4</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>13.90</span></h2>
                     </div>
                     <div class="caixa" onclick= "selecionarBebida(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 5</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>14.90</span></h2>
                     </div>
                     <div class="caixa" onclick= "selecionarBebida(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 6</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>15.90</span></h2>
                     </div>
                        
                 </div>
@@ -81,35 +81,65 @@
                 <div class="container sobremesas">
                     <div class="caixa" onclick= "selecionarSobremesa(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 7</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>16.90</span></h2>
                     </div>
                     <div class="caixa" onclick= "selecionarSobremesa(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 8</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>17.90</span></h2>
                     </div>
                     <div class="caixa" onclick= "selecionarSobremesa(this)">
                         <img src="./imagens/frango_yin_yang.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Frango 9</h1>
                         <h3>Um pouco de batata, um pouco de salada</h3>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ <span>18.90</span></h2>
                     </div>
                        
                 </div>
 
                 <div class="finalizar">
-                    <div class="botao">
-                    <h2>Selecione os 3 itens</h2>
-                    <h2>para fechar o pedido</h2>
-                    </div>
+                    <button class="botao" disabled onclick="finalizarPedido()">
+                    <h2 class="texto1">Selecione os 3 itens <br />para fechar o pedido</h2>
+                    </button>
+                    
                 </div>
             </div>
 
         </div>
     </div>
+    <div class="aux none">
+    <div class="fundo-tela">
+        <div class="caixa-confirmacao">
+            <h1>Confirme seu pedido</h1>
+            <div class="prato">
+                <h2>prato</h2>
+                <h3>valor</h3>
+            </div>
+            <div class="bebida">
+                <h2>bebida</h2>
+                <h3>valor</h3>
+            </div>
+            <div class="sobremesa">
+                <h2>sobremesa</h2>
+                <h3>valor</h3>
+            </div>
+            <div class="total">
+                <h2>TOTAL</h2>
+                <h3>valor</h3>
+            </div>
+            <button 
+            class="fazerPedido"
+            onclick="finalizar()"
+            >
+            <h4>Tudo certo, pode pedir</h4>
+        </button>
+        <h1 onclick="cancelar()">Cancelar</h1>
+        </div>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
