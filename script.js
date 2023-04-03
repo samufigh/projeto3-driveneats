@@ -1,9 +1,9 @@
 let pedidoPronto=false;
-let msg="";
 let prato=null;
 let bebida=null;
 let sobremesa=null;
 let=valorTotal=null;
+let msg="";
 
 function selecionarPrato(caixa){
     let caixaSelecionadaAnteriormente=document.querySelector('.pratos .borda');
@@ -73,7 +73,7 @@ function finalizarPedido(){
     const preco1Selecionado = document.querySelector('.pratos .borda h2 span')
     const preco1 = preco1Selecionado.innerHTML;
     const preco1Final = document.querySelector('.prato h3');
-    preco1Final.innerHTML="R$ "+ preco1;
+    preco1Final.innerHTML=preco1;
 
 
     //trocar nome da bebida
@@ -85,7 +85,7 @@ function finalizarPedido(){
     const preco2Selecionado = document.querySelector('.bebidas .borda h2 span')
     const preco2 = preco2Selecionado.innerHTML;
     const preco2Final = document.querySelector('.bebida h3');
-    preco2Final.innerHTML="R$ "+ preco2;
+    preco2Final.innerHTML=preco2;
 
 
     //trocar nome da sobremesa
@@ -97,23 +97,21 @@ function finalizarPedido(){
     const preco3Selecionado = document.querySelector('.sobremesas .borda h2 span')
     const preco3 = preco3Selecionado.innerHTML;
     const preco3Final = document.querySelector('.sobremesa h3');
-    preco3Final.innerHTML="R$ "+ preco3;
-
-    const precoBebida=preco2Final.textContent.replace(",", ".");
-    const precoSobremesa=preco3Final.textContent.replace(",", ".");
+    preco3Final.innerHTML= preco3;
 
     //trocar valor total
     valorTotal= Number(preco1)+Number(preco2)+Number(preco3);
-    console.log(valorTotal);
     const total = document.querySelector('.total h3');
-    total.innerHTML= "R$ "+ valorTotal;
+    total.innerHTML= "R$ "+valorTotal;
+
+    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${valorTotal}`;
 }
 
 function cancelar(){
-    const z=document.querySelector('aux');
-    z.classList.add('none');
+    const voltar=document.querySelector('.aux');
+    voltar.classList.add('none');
 }
-msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${totalPrice}`;
 function finalizar(){
     window.open("https://wa.me/5519994330867?text=" + encodeURI(msg));
 }
+
