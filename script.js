@@ -7,34 +7,46 @@ let msg="";
 
 function selecionarPrato(caixa){
     let caixaSelecionadaAnteriormente=document.querySelector('.pratos .borda');
-    if(caixaSelecionadaAnteriormente!== null){
+    let checkAnterior=document.querySelector('.pratos .borda ion-icon');
+    if(caixaSelecionadaAnteriormente!== null && checkAnterior !== null){
         caixaSelecionadaAnteriormente.classList.remove('borda');
+        checkAnterior.classList.add('none');
     }
 
     let selecionar=caixa;
     selecionar.classList.add("borda");
+    let check=document.querySelector('.pratos .borda ion-icon');
+    check.classList.remove('none');
     fecharPedido();
 }
 
 function selecionarBebida(caixa){
     let caixaSelecionadaAnteriormente=document.querySelector('.bebidas .borda');
-    if(caixaSelecionadaAnteriormente!== null){
+    let checkAnterior=document.querySelector('.bebidas .borda ion-icon');
+    if(caixaSelecionadaAnteriormente!== null && checkAnterior !== null){
         caixaSelecionadaAnteriormente.classList.remove('borda');
+        checkAnterior.classList.add('none');
     }
 
     let selecionar=caixa;
     selecionar.classList.add("borda");
+    let check=document.querySelector('.bebidas .borda ion-icon');
+    check.classList.remove('none');
     fecharPedido();
 }
 
 function selecionarSobremesa(caixa){
     let caixaSelecionadaAnteriormente=document.querySelector('.sobremesas .borda');
-    if(caixaSelecionadaAnteriormente!== null){
+    let checkAnterior=document.querySelector('.sobremesas .borda ion-icon');
+    if(caixaSelecionadaAnteriormente!== null && checkAnterior !== null){
         caixaSelecionadaAnteriormente.classList.remove('borda');
+        checkAnterior.classList.add('none');
     }
 
     let selecionar=caixa;
     selecionar.classList.add("borda");
+    let check=document.querySelector('.sobremesas .borda ion-icon');
+    check.classList.remove('none');
     fecharPedido();
 }
 
@@ -61,7 +73,7 @@ function fecharPedido(){
 
 }
 function finalizarPedido(){
-    const x=document.querySelector('.none');
+    const x=document.querySelector('.aux');
     x.classList.remove('none');
 
     //trocar nome do prato
@@ -114,4 +126,3 @@ function cancelar(){
 function finalizar(){
     window.open("https://wa.me/5519994330867?text=" + encodeURI(msg));
 }
-

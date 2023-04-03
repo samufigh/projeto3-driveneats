@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     top:0;
     left: 0;
@@ -68,7 +68,15 @@
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     box-sizing: border-box;
+    position: relative;
 }
+ion-icon{
+    color:#32B72F;
+    position:absolute;
+    z-index: 1;
+    top: 179px;
+    left: 139px;
+  }
 .borda{
     border: 5px solid #32B72F;
     box-sizing:border-box;
@@ -137,6 +145,9 @@
 .none2{
     display: none;
 }
+.none1{
+    display: none;
+}
 
 .fundo-tela {
     background-color: rgba(255, 255, 255, 0.9);
@@ -164,6 +175,7 @@
     font-size: 22px;
     border-radius: 9px;
     line-height: 26px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
   }
   .caixa-confirmacao > h1{
     display:flex;
