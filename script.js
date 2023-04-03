@@ -112,11 +112,10 @@ function finalizarPedido(){
     preco3Final.innerHTML= preco3;
 
     //trocar valor total
-    valorTotal= Number(preco1)+Number(preco2)+Number(preco3);
-    const total = document.querySelector('.total h3');
-    total.innerHTML= "R$ "+valorTotal;
+    calcular (preco1, preco2, preco3);
 
-    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${valorTotal}`;
+
+    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${Number(valorTotal).toFixed(2)}`;
 }
 
 function cancelar(){
@@ -125,4 +124,12 @@ function cancelar(){
 }
 function finalizar(){
     window.open("https://wa.me/5519994330867?text=" + encodeURI(msg));
+}
+function calcular (prato, bebida, sobremesa){
+    prato=prato.replace(",",".");
+    bebida=bebida.replace(",",".");
+    sobremesa=sobremesa.replace(",",".");
+    valorTotal= Number(prato)+Number(bebida)+Number(sobremesa);
+    const total = document.querySelector('.total h3');
+    total.innerHTML= "R$ "+ Number(valorTotal).toFixed(2);
 }
