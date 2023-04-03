@@ -214,3 +214,10 @@ ion-icon{
   .caixa-confirmacao :nth-child(7){
     font-size: 20px;
   }
+  .caixa-confirmacao :nth-child(7){
+    font-size: 20px;
+    color:white;
+    background-color:#50D074 ;
+    border: 0px;
+    font-weight: 700;
+  }
