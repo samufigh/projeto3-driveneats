@@ -2,7 +2,7 @@ let pedidoPronto=false;
 let prato=null;
 let bebida=null;
 let sobremesa=null;
-let=valorTotal=null;
+let valorTotal=null;
 let msg="";
 
 function selecionarPrato(caixa){
@@ -115,7 +115,7 @@ function finalizarPedido(){
     calcular (preco1, preco2, preco3);
 
 
-    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${Number(valorTotal).toFixed(2)}`;
+    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \n- Total: R$ ${Number(valorTotal).toFixed(2)}`;
 }
 
 function cancelar(){
